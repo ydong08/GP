@@ -1,0 +1,441 @@
+<!DOCTYPE html>  
+<meta charset="utf-8" />  
+<title>WebSocket Test</title>  
+<script src="long.js"></script>
+
+<script language="javascript"type="text/javascript">  
+    var wsUri ="ws://183.60.111.136:7896/"; 
+/*    var output;  
+	longVal = new Long(0xFFFFFFF7, 0xFFFFFFFF, false);
+	alert(longVal.toString())*/
+	
+	function getutf8bytecount(byteval)
+	{
+		var bCount = 0;
+		for (var i = 7; i >= 0; --i)
+		{
+			if (byteval & (1 << i)) {
+				bCount++;
+			} else {
+				break;
+			}
+			
+			
+		}
+		
+		return bCount;
+	}
+	
+	function utf8tounicode(code)
+	{
+		if (code <= 0x7f) {
+			return String.fromCharCode(code)
+		}
+		
+		var bStart = false;
+		var bCount = 0;
+		var bFinish = false;
+		var newCode = 0;
+		var bFlag = code & 0xff;
+
+		bCount = getutf8bytecount(bFlag);
+		
+		var newCode = 0;
+		for (var i = 0; i < bCount; ++i) {
+			var val = code & (0xff << (i * 8))
+			
+			val = val >>> (i * 8)
+			if (i == 0) {
+				for (var t = 1; t <= bCount; ++t) {
+					val = val & (~(1 << (8 - t)));
+				}
+			} else {
+				val = val & 0x3f;
+			}
+			
+		
+			newCode += val << (6 * (bCount - i - 1));
+		}
+		
+		
+		return String.fromCharCode(newCode)
+	}
+	
+	function unicodetoutf8(code)
+	{
+		if (code <= 0x7f) { // 不需要转换
+			return {code:code, bytelen:1};;
+		}
+		
+		var bCount = 0; // 二进制位数量
+		for (var i = 0; i < 32; ++i) {
+			if (code & (1 << i)) {
+				bCount = i + 1;
+			}
+		}
+	
+		var bByte = 0;
+		
+		// utf8编码占用的字节数
+		bByte = Math.ceil(bCount / 6);
+		
+		// 计算是否要进位
+		var bTmp = bCount % 6;
+		bTmp = (bTmp == 0) ? 6 : bTmp;
+		
+		if (bTmp > (7 - bByte)) {
+			bByte++;
+		}
+		
+		// 填充编码
+		var utf8Code = 0;
+		for (var i = 0; i < bByte - 1; ++i)
+		{
+			var bValue = (code >>> (i * 6)) & 0x3f; // 最低位放到最高位
+			bValue = (1 << 7) + bValue;
+			
+			utf8Code += bValue << ((bByte - i - 1) * 8);
+		}
+		
+		// 填充最后剩余的编码
+		var bValue = code >>> ((bByte - 1) * 6);
+		
+		// 填充标识符
+		var bFlag = 0;
+		for (var i = 0; i < bByte; ++i) {
+			bFlag += 1 << (7 - i);
+		}
+		
+		utf8Code += bFlag + bValue;
+		
+		return {code:utf8Code, bytelen:bByte};
+	}
+	
+	function utfbytes2string(bytes)
+	{
+		if (bytes.length == 0) {
+			return "";
+		}
+		
+		var retString = "";
+		
+		
+		for (var i = 0; i < bytes.length; )
+		{
+			if (bytes[i] <= 0x7f) {
+				retString += utf8tounicode(bytes[i]);
+				i++;
+				continue;
+			}
+			var bCount = getutf8bytecount(bytes[i]);
+			var utf8code = 0;
+			for (var t = 0; t < bCount; ++t) {
+				utf8code += bytes[i + t] << (t * 8)
+			}
+			
+			retString += utf8tounicode(utf8code);
+			i += bCount;
+			
+		}
+		
+		return retString;
+		
+	}
+	
+	String.prototype.toUtf8 = function() {
+		var strLen = this.length;
+		var allBytes = []; 
+		var allLen = 0;
+		for (var i = 0; i < strLen; ++i) {
+			var unicode = this.charCodeAt(i);
+			var result = unicodetoutf8(unicode);
+			allLen += result.bytelen;
+			allBytes.push(result);
+		}
+		
+		
+		
+		return {codes: allBytes, bytelens: allLen};
+	};
+	/*
+	alert(utf8tounicode(0xB188e7));
+	alert(utf8tounicode(0xB9A6E5));
+	alert(utf8tounicode(0x90ADE5));
+	alert(utf8tounicode(0x849AE7));
+	alert(utf8tounicode(0x8BA7E7));*/
+	//alert(unicodetoutf8(29233));
+	
+/*	var str = "爱妹子的";
+	
+	var aa = str.toUtf8();
+	var a = 1;*/
+	
+	function item(type, len, value)
+	{
+		var obj = new Object();
+		obj.type = type;
+		obj.len = len;
+		obj.value = value;
+		
+		return obj;
+	}
+	
+    function mydataview(arraybuffer)
+    {
+        this.offset = 0;
+		this.writeMap = [];
+		if (arraybuffer) {
+			this.aDataArray = new DataView(arraybuffer); 
+		}
+        
+    }
+	
+	mydataview.prototype._getString = function(bBig) {
+        var len = this.aDataArray.getInt32(this.offset, bBig);
+        this.offset += 4;
+		var bytes = [];
+		for (var i = 0; i < len; ++i)
+		{
+			var b = this.aDataArray.getUint8(this.offset, bBig);
+			bytes.push(b);
+			this.offset += 1;
+		}
+		
+        return utfbytes2string(bytes);
+    }
+
+    mydataview.prototype._getInt32 = function(bBig) {
+        var value = this.aDataArray.getInt32(this.offset, bBig)
+        this.offset += 4
+
+
+        return value
+    }
+	
+	mydataview.prototype._getInt64 = function(bBig) {
+        var low = this.aDataArray.getUint32(this.offset, true)
+        this.offset += 4
+		
+		var higt = this.aDataArray.getUint32(this.offset, true)
+        this.offset += 4
+		
+		
+		longVal = new Long(low, higt, false);
+
+        return longVal.toNumber()
+    }
+
+    mydataview.prototype._getInt8 = function(bBig) {
+	
+		while (true) {
+			var value = this.aDataArray.getInt8(this.offset, bBig)
+			this.offset += 1
+			
+			if (value == 0) {
+			}
+		}
+        
+
+        return value
+    }
+	
+	mydataview.prototype._getInt16 = function(bBig) {
+        var value = this.aDataArray.getInt16(this.offset, bBig)
+        this.offset += 2
+
+        return value
+    }
+	
+	mydataview.prototype._setInt32 = function(value) {
+		this.writeMap.push(item("int32", 4, value));
+	}
+	
+	mydataview.prototype._setInt64 = function(value) {
+		this.writeMap.push(item("int64", 8, value));
+	}
+	
+	mydataview.prototype._setInt16 = function(value) {
+		this.writeMap.push(item("int16", 2, value));
+	}
+	
+	mydataview.prototype._setString = function(value) {
+		var result = value.toUtf8();
+		this.writeMap.push(item("string", result.bytelens + 4, result)); // +4 是因为字符串前面要写入一个长度
+	}
+	
+	
+	mydataview.prototype._getbuffer = function() {
+		var allLen = 0;
+		for (var i = 0; i < this.writeMap.length; ++i)
+		{
+			allLen += this.writeMap[i].len
+		}
+		var arraybuffer = new ArrayBuffer(allLen);
+		var dataview = new DataView(arraybuffer);
+		var offset = 0;
+		
+		for (var i = 0; i < this.writeMap.length; ++i)
+		{
+			switch (this.writeMap[i].type)
+			{
+			case "int32":
+				dataview.setInt32(offset, this.writeMap[i].value);
+				offset += 4;
+				break;
+				
+			case "int16":
+				dataview.setInt16(offset, this.writeMap[i].value);
+				offset += 2;
+				break;
+				
+			case "string":
+				// 写入长度
+				dataview.setInt32(offset, this.writeMap[i].value.bytelens);
+				offset += 4;
+				
+				// 写入字节数据
+				var codes = this.writeMap[i].value.codes;
+				for (var n = 0; n < codes.length; ++n)
+				{
+					var code = codes[n].code;
+					var len = codes[n].bytelen;
+					
+					for (var t = 0; t < len; ++t) {
+						var b = (code >> (t * 8)) & 0xff;
+						dataview.setUint8(offset, b);
+						offset += 1;
+					}
+				}
+				
+				break;
+			case "int64":
+				var langValue = Long.fromValue(this.writeMap[i].value);
+				var bytes = langValue.toBytesLE();
+				
+				for (var i = 0; i < bytes.length; ++i)
+				{
+					dataview.setUint8(offset + i, bytes[i]);
+				}
+				
+				
+				
+				offset += 8;
+				
+				
+			default:
+				break;
+			}
+		}
+		
+		return arraybuffer;
+	}
+
+    
+    function init() { 
+        output = document.getElementById("output"); 
+        testWebSocket(); 
+    }  
+ 
+    function testWebSocket() { 
+        websocket = new WebSocket(wsUri); 
+        websocket.binaryType="arraybuffer" 
+        websocket.onopen = function(evt) { 
+            /*
+			var aDataArray = new mydataview( evt.data );  
+			alert(aDataArray)
+			alert(aDataArray._getInt32(1))
+			alert(aDataArray._getInt32())
+			alert(aDataArray._getInt8())
+			websocket.close();*/
+            onOpen(evt) 
+        }; 
+        websocket.onclose = function(evt) { 
+            onClose(evt) 
+        }; 
+        websocket.onmessage = function(evt) { 
+        writeToScreen("onmessage"); 
+
+            onMessage(evt) 
+        }; 
+        websocket.onerror = function(evt) { 
+            onError(evt) 
+        }; 
+    }  
+ 
+    function onOpen(evt) { 
+        writeToScreen("CONNECTED"); 
+        // doSend("WebSocket rocks"); 
+		
+		// 发送数据 
+		
+		var aDataArray = new mydataview();  
+		aDataArray._setInt32(123);
+		aDataArray._setInt32(456);
+		aDataArray._setInt32(789);
+		aDataArray._setInt16(110);
+		var str = "爱妹子的";
+		aDataArray._setString(str);
+		aDataArray._setInt64(70368744177663);
+		
+		
+		var _arraybuffer = aDataArray._getbuffer();
+		
+		
+		websocket.send(_arraybuffer);
+    }  
+ 
+    function onClose(evt) { 
+        writeToScreen("DISCONNECTED"); 
+    }  
+
+ 
+    function onMessage(evt) {
+
+        writeToScreen('<span style="color: blue;">RESPONSE: '+ evt.data+'</span>'); 
+/*        var aDataArray = new mydataview( evt.data );  
+        alert(aDataArray)
+        alert(aDataArray._getInt32(1))
+        alert(aDataArray._getInt32())
+        alert(aDataArray._getInt8())
+        */
+		
+		var aDataArray = new mydataview( evt.data );  
+		//alert(aDataArray)
+		writeToScreen('<span style="color: blue;">RESPONSE: '+ String(aDataArray._getInt32()) +'</span>')
+		writeToScreen('<span style="color: blue;">RESPONSE: '+ String(aDataArray._getInt32())+'</span>')
+		writeToScreen('<span style="color: blue;">RESPONSE: '+ String(aDataArray._getInt32())+'</span>')
+		writeToScreen('<span style="color: blue;">RESPONSE: '+ String(aDataArray._getInt16())+'</span>')
+		writeToScreen('<span style="color: blue;">RESPONSE: '+ aDataArray._getString()+'</span>')
+		writeToScreen('<span style="color: blue;">RESPONSE: '+ aDataArray._getInt64()+'</span>')
+		websocket.close();
+		
+    }  
+ 
+    function onError(evt) { 
+        writeToScreen('<span style="color: red;">ERROR:</span> '+ evt.data); 
+    }  
+ 
+    function doSend(message) { 
+        writeToScreen("SENT: " + message);  
+        // websocket.send(message); 
+        var _arraybuffer = new ArrayBuffer(30);
+        var _dataView = new DataView(_arraybuffer);
+
+        _dataView.setInt32(0, 1);
+        
+        websocket.send(_arraybuffer);
+
+    }  
+ 
+    function writeToScreen(message) { 
+        var pre = document.createElement("p"); 
+        pre.style.wordWrap = "break-word"; 
+        pre.innerHTML = message; 
+        output.appendChild(pre); 
+    }  
+ 
+    window.addEventListener("load", init, false);  
+</script>  
+<h2>WebSocket Test</h2>  
+<div id="output"></div>  
+</html>

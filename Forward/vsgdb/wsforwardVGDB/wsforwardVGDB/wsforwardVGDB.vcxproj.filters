@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source files">
+      <UniqueIdentifier>{9364091b-8759-4392-a800-a423ad5c1c48}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header files">
+      <UniqueIdentifier>{7da08337-df5a-4da0-8af3-81306ba39672}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource files">
+      <UniqueIdentifier>{7118d68c-b7b2-4f6f-88a6-4ee43417ae98}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Make files">
+      <UniqueIdentifier>{7a10622b-3aa8-4ffe-9d60-3b8c8d46c665}</UniqueIdentifier>
+      <Extensions>*.mak</Extensions>
+    </Filter>
+    <Filter Include="VisualGDB settings">
+      <UniqueIdentifier>{27e03289-57d8-4493-b4a2-4fb65ebe1c95}</UniqueIdentifier>
+      <Extensions>*.vgdbsettings</Extensions>
+    </Filter>
+    <Filter Include="loger">
+      <UniqueIdentifier>{74943e81-c1b6-4d9d-8686-e0cc2751e9b8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Makefile" />
+    <None Include="debug.mak">
+      <Filter>Make files</Filter>
+    </None>
+    <None Include="wsforwardVGDB-Debug.vgdbsettings">
+      <Filter>VisualGDB settings</Filter>
+    </None>
+    <None Include="release.mak">
+      <Filter>Make files</Filter>
+    </None>
+    <None Include="wsforwardVGDB-Release.vgdbsettings">
+      <Filter>VisualGDB settings</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Base64.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="main.hpp">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryPool.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="module.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="sha1.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="SLocker.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="SThread.hpp">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="TCPNetworkEngine.hpp">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="Log\Console.h">
+      <Filter>loger</Filter>
+    </ClInclude>
+    <ClInclude Include="Log\Logger.h">
+      <Filter>loger</Filter>
+    </ClInclude>
+    <ClInclude Include="Log\MyLogger.h">
+      <Filter>loger</Filter>
+    </ClInclude>
+    <ClInclude Include="Log\TtyColor.h">
+      <Filter>loger</Filter>
+    </ClInclude>
+    <ClInclude Include="Log\MsgQueue.h">
+      <Filter>loger</Filter>
+    </ClInclude>
+    <ClInclude Include="Log\Util.h">
+      <Filter>loger</Filter>
+    </ClInclude>
+    <ClInclude Include="Log\Typedef.h">
+      <Filter>loger</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Base64.cpp">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryPool.cpp">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="sha1.cpp">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="SThread.cpp">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="TCPNetworkEngine.cpp">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="Log\Logger.cpp">
+      <Filter>loger</Filter>
+    </ClCompile>
+    <ClCompile Include="Log\MyLogger.cpp">
+      <Filter>loger</Filter>
+    </ClCompile>
+    <ClCompile Include="Log\Util.cpp">
+      <Filter>loger</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
