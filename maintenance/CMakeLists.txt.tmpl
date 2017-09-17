@@ -1,0 +1,31 @@
+cmake_minimum_required(VERSION 2.8.6)
+project(DD_Games)
+
+set(sdk_path
+        ${CMAKE_HOME_DIRECTORY}/DD_SDK
+        )
+
+set(crypt_sdk_inc
+        ${CMAKE_HOME_DIRECTORY}/DDCrypt_SDK/include
+)
+
+set(crypt_sdk_path
+        ${CMAKE_HOME_DIRECTORY}/DDCrypt_SDK/LibCentos
+        ${CMAKE_HOME_DIRECTORY}/DDCrypt_SDK/openssl/linux_lib
+	${CMAKE_HOME_DIRECTORY}/DDCrypt_SDK/third/curl/lib
+)
+# cmake
+set(sdk_cmake_path
+        ${sdk_path}/cmake
+        )
+
+include(${sdk_cmake_path}/base.cmake)
+include(${sdk_cmake_path}/common.cmake)
+        
+set(crypt_libs
+    "${LIB_PRE_NAME}DDCrypt.${LIB_EXT_NAME}"
+    "${LIB_PRE_NAME}curl.${LIB_EXT_NAME}"
+    "${LIB_PRE_NAME}ssl.${LIB_EXT_NAME}"
+    "${LIB_PRE_NAME}crypto.${LIB_EXT_NAME}"
+)
+

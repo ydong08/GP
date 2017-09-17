@@ -1,0 +1,5 @@
+#pragma once
+
+#define COMM_VERSION "714824f6a52cb54bf19410328557eaa9dc1657fb"
+#define COMM_SHORT_VERSION "714824f"
+#define COMM_BUILD_TIME "0425_1401"

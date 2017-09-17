@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugDDCrypto|Win32">
+      <Configuration>DebugDDCrypto</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseDDCrypto|Win32">
+      <Configuration>ReleaseDDCrypto</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7417E7E2-9EB4-4EFF-843D-FF0FA80B43EC}</ProjectGuid>
+    <ProjectName>HttpSvrUCenterXY</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='DebugDDCrypto|Win32'">
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='ReleaseDDCrypto|Win32'">
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <NMakeIncludeSearchPath>$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.102\0000\include\mysql\;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.102\0001\4.4.7;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.102\0001\4.4.7\x86_64-redhat-linux;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.102\0001\4.4.7\backward;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.102\0003\include;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.102\0002\include;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.102\0000\include;.\;comm;comm\Util;third\HttSvrComm\include;third\HttSvrComm\include\Log;third\HttSvrComm\include\hiredis;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <NMakeForcedIncludes>$(ProjectDir)\gcc_Debug.h;$(VISUALGDB_DIR)\gcc_compat.h;$(NMakeForcedIncludes)</NMakeForcedIncludes>
+    <NMakeBuildCommandLine>"$(VISUALGDB_DIR)\VisualGDB.exe" /build "$(ProjectPath)" "/solution:$(SolutionPath)" "/config:$(Configuration)" "/platform:$(Platform)"</NMakeBuildCommandLine>
+    <NMakeCleanCommandLine>"$(VISUALGDB_DIR)\VisualGDB.exe" /clean "$(ProjectPath)" "/solution:$(SolutionPath)" "/config:$(Configuration)" "/platform:$(Platform)"</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>"$(VISUALGDB_DIR)\VisualGDB.exe" /rebuild "$(ProjectPath)" "/solution:$(SolutionPath)" "/config:$(Configuration)" "/platform:$(Platform)"</NMakeReBuildCommandLine>
+    <NMakeOutput>$(ProjectDir)HttpSvr-Debug.vgdbsettings</NMakeOutput>
+    <IncludePath />
+    <ReferencePath />
+    <LibraryPath />
+    <NMakePreprocessorDefinitions>__VisualGDB_CFG_Debug;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <NMakeIncludeSearchPath>$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.102\0000\include\mysql\;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.102\0001\4.4.7;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.102\0001\4.4.7\x86_64-redhat-linux;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.102\0001\4.4.7\backward;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.102\0003\include;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.102\0002\include;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.102\0000\include;.\;comm;comm\Util;third\HttSvrComm\include;third\HttSvrComm\include\Log;third\HttSvrComm\include\hiredis;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <NMakeForcedIncludes>$(ProjectDir)\gcc_Release.h;$(VISUALGDB_DIR)\gcc_compat.h;$(NMakeForcedIncludes)</NMakeForcedIncludes>
+    <NMakeBuildCommandLine>"$(VISUALGDB_DIR)\VisualGDB.exe" /build "$(ProjectPath)" "/solution:$(SolutionPath)" "/config:$(Configuration)" "/platform:$(Platform)"</NMakeBuildCommandLine>
+    <NMakeCleanCommandLine>"$(VISUALGDB_DIR)\VisualGDB.exe" /clean "$(ProjectPath)" "/solution:$(SolutionPath)" "/config:$(Configuration)" "/platform:$(Platform)"</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>"$(VISUALGDB_DIR)\VisualGDB.exe" /rebuild "$(ProjectPath)" "/solution:$(SolutionPath)" "/config:$(Configuration)" "/platform:$(Platform)"</NMakeReBuildCommandLine>
+    <NMakeOutput>$(ProjectDir)HttpSvr-Release.vgdbsettings</NMakeOutput>
+    <IncludePath />
+    <ReferencePath />
+    <LibraryPath />
+    <NMakePreprocessorDefinitions>__VisualGDB_CFG_Release;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDDCrypto|Win32'">
+    <NMakeBuildCommandLine>"$(VISUALGDB_DIR)\VisualGDB.exe" /build "$(ProjectPath)" "/solution:$(SolutionPath)" "/config:$(Configuration)" "/platform:$(Platform)"</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>"$(VISUALGDB_DIR)\VisualGDB.exe" /rebuild "$(ProjectPath)" "/solution:$(SolutionPath)" "/config:$(Configuration)" "/platform:$(Platform)"</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>"$(VISUALGDB_DIR)\VisualGDB.exe" /clean "$(ProjectPath)" "/solution:$(SolutionPath)" "/config:$(Configuration)" "/platform:$(Platform)"</NMakeCleanCommandLine>
+    <NMakeOutput>$(ProjectDir)HttpSvr-DebugDDCrypto.vgdbsettings</NMakeOutput>
+    <NMakeIncludeSearchPath>$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.102\0000\include\mysql\;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.102\0001\4.4.7;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.102\0001\4.4.7\x86_64-redhat-linux;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.102\0001\4.4.7\backward;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.102\0003\include;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.102\0002\include;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.102\0000\include;.\;comm;comm\Util;third\HttSvrComm\include;third\HttSvrComm\include\Log;third\HttSvrComm\include\hiredis;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <NMakeForcedIncludes>$(ProjectDir)\gcc_DebugDDCrypto.h;$(VISUALGDB_DIR)\gcc_compat.h;$(NMakeForcedIncludes)</NMakeForcedIncludes>
+    <NMakePreprocessorDefinitions>__VisualGDB_CFG_DebugDDCrypto;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDDCrypto|Win32'">
+    <NMakeBuildCommandLine>"$(VISUALGDB_DIR)\VisualGDB.exe" /build "$(ProjectPath)" "/solution:$(SolutionPath)" "/config:$(Configuration)" "/platform:$(Platform)"</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>"$(VISUALGDB_DIR)\VisualGDB.exe" /rebuild "$(ProjectPath)" "/solution:$(SolutionPath)" "/config:$(Configuration)" "/platform:$(Platform)"</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>"$(VISUALGDB_DIR)\VisualGDB.exe" /clean "$(ProjectPath)" "/solution:$(SolutionPath)" "/config:$(Configuration)" "/platform:$(Platform)"</NMakeCleanCommandLine>
+    <NMakeOutput>$(ProjectDir)HttpSvr-ReleaseDDCrypto.vgdbsettings</NMakeOutput>
+    <NMakeIncludeSearchPath>$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.102\0000\include\mysql\;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.102\0001\4.4.7;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.102\0001\4.4.7\x86_64-redhat-linux;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.102\0001\4.4.7\backward;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.102\0003\include;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.102\0002\include;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.102\0000\include;.\;comm;comm\Util;third\HttSvrComm\include;third\HttSvrComm\include\Log;third\HttSvrComm\include\hiredis;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <NMakeForcedIncludes>$(ProjectDir)\gcc_ReleaseDDCrypto.h;$(VISUALGDB_DIR)\gcc_compat.h;$(NMakeForcedIncludes)</NMakeForcedIncludes>
+    <NMakePreprocessorDefinitions>__VisualGDB_CFG_ReleaseDDCrypto;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="CalUsingTime.cpp" />
+    <ClCompile Include="CConfig.cpp" />
+    <ClCompile Include="CHttpReqDispatch.cpp" />
+    <ClCompile Include="comm\ClientSocketEx.cpp" />
+    <ClCompile Include="comm\EvtClientMgr.cpp" />
+    <ClCompile Include="comm\HttpLib.cpp" />
+    <ClCompile Include="comm\Packet.cpp" />
+    <ClCompile Include="comm\RedisLogic.cpp" />
+    <ClCompile Include="comm\SqlLogic.cpp" />
+    <ClCompile Include="comm\TcpMsg.cpp" />
+    <ClCompile Include="comm\UserDoing.cpp" />
+    <ClCompile Include="comm\Util\base64.cpp" />
+    <ClCompile Include="comm\Util\Helper.cpp" />
+    <ClCompile Include="comm\Util\IniFile.cpp" />
+    <ClCompile Include="comm\Util\Lib_Ip.cpp" />
+    <ClCompile Include="comm\Util\md5.cpp" />
+    <ClCompile Include="comm\Util\url_code.cpp" />
+    <ClCompile Include="comm\XyCrypto.cpp" />
+    <ClCompile Include="comm\XyCryptoEx.cpp" />
+    <ClCompile Include="comm\XyRsa.cpp" />
+    <ClCompile Include="HttpSvr.cpp" />
+    <ClCompile Include="http_handle\CAccountLogin.cpp" />
+    <ClCompile Include="http_handle\CBankCreate.cpp" />
+    <ClCompile Include="http_handle\CBankFindPasswd.cpp" />
+    <ClCompile Include="http_handle\CBankGetMoney.cpp" />
+    <ClCompile Include="http_handle\CBankResetPasswd.cpp" />
+    <ClCompile Include="http_handle\CBankSaveMoney.cpp" />
+    <ClCompile Include="http_handle\CCheckIdCode.cpp" />
+    <ClCompile Include="http_handle\CCheckMnick.cpp" />
+    <ClCompile Include="http_handle\CCheckUserName.cpp" />
+    <ClCompile Include="http_handle\CGetCheating.cpp" />
+    <ClCompile Include="http_handle\CGetFeedBackHistory.cpp" />
+    <ClCompile Include="http_handle\CGetFeedBackSet.cpp" />
+    <ClCompile Include="http_handle\CGetGameInfo.cpp" />
+    <ClCompile Include="http_handle\CGetGameOnline.cpp" />
+    <ClCompile Include="http_handle\CGetGameResource.cpp" />
+    <ClCompile Include="http_handle\CGetGameSwitch.cpp" />
+    <ClCompile Include="http_handle\CGetGameVersion.cpp" />
+    <ClCompile Include="http_handle\CGetNotice.cpp" />
+    <ClCompile Include="http_handle\CGetPayInfo.cpp" />
+    <ClCompile Include="http_handle\CGetProductRoomConfig.cpp" />
+    <ClCompile Include="http_handle\CGetRank.cpp" />
+    <ClCompile Include="http_handle\CGetRankAwardRules.cpp" />
+    <ClCompile Include="http_handle\CGetRoomConfig.cpp" />
+    <ClCompile Include="http_handle\CGetTaskAward.cpp" />
+    <ClCompile Include="http_handle\CGetTaskInfo.cpp" />
+    <ClCompile Include="http_handle\CGuestBinding.cpp" />
+    <ClCompile Include="http_handle\CGuestLogin.cpp" />
+    <ClCompile Include="http_handle\CHttpRequestHandler.cpp" />
+    <ClCompile Include="http_handle\CIssuedAccount.cpp" />
+    <ClCompile Include="http_handle\CReceiveBenefits.cpp" />
+    <ClCompile Include="http_handle\CRegBindingAliPay.cpp" />
+    <ClCompile Include="http_handle\CRegGetLdCode.cpp" />
+    <ClCompile Include="http_handle\CRegGetPassword.cpp" />
+    <ClCompile Include="http_handle\CRegResetPassword.cpp" />
+    <ClCompile Include="http_handle\CRegUserName.cpp" />
+    <ClCompile Include="http_handle\CRegUserNameBinding.cpp" />
+    <ClCompile Include="http_handle\CReloadConfig.cpp" />
+    <ClCompile Include="http_handle\CSetDefaultIcon.cpp" />
+    <ClCompile Include="http_handle\CTest.cpp" />
+    <ClCompile Include="http_handle\CUpdateIcon.cpp" />
+    <ClCompile Include="http_handle\CUpdateUser.cpp" />
+    <ClCompile Include="MySqlDBAccessMgr.cpp" />
+    <ClCompile Include="RedisAccessMgr.cpp" />
+    <ClCompile Include="threadres.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="debug.mak" />
+    <None Include="debugddcrypto.mak" />
+    <None Include="HttpSvr-Debug.vgdbsettings" />
+    <None Include="HttpSvr-Release.vgdbsettings" />
+    <None Include="Makefile" />
+    <None Include="release.mak" />
+    <None Include="releaseddcrypto.mak" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CalUsingTime.h" />
+    <ClInclude Include="CConfig.h" />
+    <ClInclude Include="CHttpReqDispatch.h" />
+    <ClInclude Include="comm\atomic.h" />
+    <ClInclude Include="comm\ClientSocketEx.h" />
+    <ClInclude Include="comm\EvtClientMgr.h" />
+    <ClInclude Include="comm\HttpLib.h" />
+    <ClInclude Include="comm\Packet.h" />
+    <ClInclude Include="comm\RedisLogic.h" />
+    <ClInclude Include="comm\SqlLogic.h" />
+    <ClInclude Include="comm\TcpMsg.h" />
+    <ClInclude Include="comm\UserDoing.h" />
+    <ClInclude Include="comm\Util\base64.h" />
+    <ClInclude Include="comm\Util\Helper.h" />
+    <ClInclude Include="comm\Util\IniFile.h" />
+    <ClInclude Include="comm\Util\Lib_Ip.h" />
+    <ClInclude Include="comm\Util\md5.h" />
+    <ClInclude Include="comm\Util\url_code.h" />
+    <ClInclude Include="comm\XyCrypto.h" />
+    <ClInclude Include="comm\XyCryptoEx.h" />
+    <ClInclude Include="comm\XyRsa.h" />
+    <ClInclude Include="http_handle\CAccountLogin.h" />
+    <ClInclude Include="http_handle\CBankCreate.h" />
+    <ClInclude Include="http_handle\CBankFindPasswd.h" />
+    <ClInclude Include="http_handle\CBankGetMoney.h" />
+    <ClInclude Include="http_handle\CBankResetPasswd.h" />
+    <ClInclude Include="http_handle\CBankSaveMoney.h" />
+    <ClInclude Include="http_handle\CCheckIdCode.h" />
+    <ClInclude Include="http_handle\CCheckMnick.h" />
+    <ClInclude Include="http_handle\CCheckUserName.h" />
+    <ClInclude Include="http_handle\CGetCheating.h" />
+    <ClInclude Include="http_handle\CGetFeedBackHistory.h" />
+    <ClInclude Include="http_handle\CGetFeedBackSet.h" />
+    <ClInclude Include="http_handle\CGetGameInfo.h" />
+    <ClInclude Include="http_handle\CGetGameOnline.h" />
+    <ClInclude Include="http_handle\CGetGameResource.h" />
+    <ClInclude Include="http_handle\CGetGameSwitch.h" />
+    <ClInclude Include="http_handle\CGetGameVersion.h" />
+    <ClInclude Include="http_handle\CGetNotice.h" />
+    <ClInclude Include="http_handle\CGetPayInfo.h" />
+    <ClInclude Include="http_handle\CGetProductRoomConfig.h" />
+    <ClInclude Include="http_handle\CGetRank.h" />
+    <ClInclude Include="http_handle\CGetRankAwardRules.h" />
+    <ClInclude Include="http_handle\CGetRoomConfig.h" />
+    <ClInclude Include="http_handle\CGetTaskAward.h" />
+    <ClInclude Include="http_handle\CGetTaskInfo.h" />
+    <ClInclude Include="http_handle\CGuestBinding.h" />
+    <ClInclude Include="http_handle\CGuestLogin.h" />
+    <ClInclude Include="http_handle\CHttpRequestHandler.h" />
+    <ClInclude Include="http_handle\CIssuedAccount.h" />
+    <ClInclude Include="http_handle\CReceiveBenefits.h" />
+    <ClInclude Include="http_handle\CRegBindingAliPay.h" />
+    <ClInclude Include="http_handle\CRegGetLdCode.h" />
+    <ClInclude Include="http_handle\CRegGetPassword.h" />
+    <ClInclude Include="http_handle\CRegResetPassword.h" />
+    <ClInclude Include="http_handle\CRegUserName.h" />
+    <ClInclude Include="http_handle\CRegUserNameBinding.h" />
+    <ClInclude Include="http_handle\CReloadConfig.hpp" />
+    <ClInclude Include="http_handle\CSetDefaultIcon.h" />
+    <ClInclude Include="http_handle\CTest.h" />
+    <ClInclude Include="http_handle\CUpdateIcon.h" />
+    <ClInclude Include="http_handle\CUpdateUser.h" />
+    <ClInclude Include="MySqlDBAccessMgr.h" />
+    <ClInclude Include="RedisAccessMgr.h" />
+    <ClInclude Include="third\curl\include\curl\curl.h" />
+    <ClInclude Include="third\curl\include\curl\curlbuild.h" />
+    <ClInclude Include="third\curl\include\curl\curlrules.h" />
+    <ClInclude Include="third\curl\include\curl\curlver.h" />
+    <ClInclude Include="third\curl\include\curl\easy.h" />
+    <ClInclude Include="third\curl\include\curl\mprintf.h" />
+    <ClInclude Include="third\curl\include\curl\multi.h" />
+    <ClInclude Include="third\curl\include\curl\stdcheaders.h" />
+    <ClInclude Include="third\curl\include\curl\typecheck-gcc.h" />
+    <ClInclude Include="third\DDCrypt\include\DDCrypt.h" />
+    <ClInclude Include="third\HttSvrComm\include\ClientSocket.h" />
+    <ClInclude Include="third\HttSvrComm\include\Console.h" />
+    <ClInclude Include="third\HttSvrComm\include\EvHttpSvr.h" />
+    <ClInclude Include="third\HttSvrComm\include\EvtTimer.h" />
+    <ClInclude Include="third\HttSvrComm\include\hiredis\async.h" />
+    <ClInclude Include="third\HttSvrComm\include\hiredis\dict.h" />
+    <ClInclude Include="third\HttSvrComm\include\hiredis\fmacros.h" />
+    <ClInclude Include="third\HttSvrComm\include\hiredis\hiredis.h" />
+    <ClInclude Include="third\HttSvrComm\include\hiredis\net.h" />
+    <ClInclude Include="third\HttSvrComm\include\hiredis\read.h" />
+    <ClInclude Include="third\HttSvrComm\include\hiredis\sds.h" />
+    <ClInclude Include="third\HttSvrComm\include\hiredis\win32.h" />
+    <ClInclude Include="third\HttSvrComm\include\JsonValueConvert.h" />
+    <ClInclude Include="third\HttSvrComm\include\json\allocator.h" />
+    <ClInclude Include="third\HttSvrComm\include\json\assertions.h" />
+    <ClInclude Include="third\HttSvrComm\include\json\autolink.h" />
+    <ClInclude Include="third\HttSvrComm\include\json\config.h" />
+    <ClInclude Include="third\HttSvrComm\include\json\features.h" />
+    <ClInclude Include="third\HttSvrComm\include\json\forwards.h" />
+    <ClInclude Include="third\HttSvrComm\include\json\json.h" />
+    <ClInclude Include="third\HttSvrComm\include\json\reader.h" />
+    <ClInclude Include="third\HttSvrComm\include\json\value.h" />
+    <ClInclude Include="third\HttSvrComm\include\json\version.h" />
+    <ClInclude Include="third\HttSvrComm\include\json\writer.h" />
+    <ClInclude Include="third\HttSvrComm\include\Logger.h" />
+    <ClInclude Include="third\HttSvrComm\include\Log\Console.h" />
+    <ClInclude Include="third\HttSvrComm\include\Log\Logger.h" />
+    <ClInclude Include="third\HttSvrComm\include\Log\MyLogger.h" />
+    <ClInclude Include="third\HttSvrComm\include\Log\TtyColor.h" />
+    <ClInclude Include="third\HttSvrComm\include\MsgQueue.h" />
+    <ClInclude Include="third\HttSvrComm\include\MyLogger.h" />
+    <ClInclude Include="third\HttSvrComm\include\MySqlDBAccess.h" />
+    <ClInclude Include="third\HttSvrComm\include\RedisAccess.h" />
+    <ClInclude Include="third\HttSvrComm\include\SpiderHttp.h" />
+    <ClInclude Include="third\HttSvrComm\include\StrFunc.h" />
+    <ClInclude Include="third\HttSvrComm\include\TtyColor.h" />
+    <ClInclude Include="third\HttSvrComm\include\Typedef.h" />
+    <ClInclude Include="third\HttSvrComm\include\Util.h" />
+    <ClInclude Include="third\libevent\include\evdns.h" />
+    <ClInclude Include="third\libevent\include\event.h" />
+    <ClInclude Include="third\libevent\include\event2\buffer.h" />
+    <ClInclude Include="third\libevent\include\event2\bufferevent.h" />
+    <ClInclude Include="third\libevent\include\event2\bufferevent_compat.h" />
+    <ClInclude Include="third\libevent\include\event2\bufferevent_ssl.h" />
+    <ClInclude Include="third\libevent\include\event2\bufferevent_struct.h" />
+    <ClInclude Include="third\libevent\include\event2\buffer_compat.h" />
+    <ClInclude Include="third\libevent\include\event2\dns.h" />
+    <ClInclude Include="third\libevent\include\event2\dns_compat.h" />
+    <ClInclude Include="third\libevent\include\event2\dns_struct.h" />
+    <ClInclude Include="third\libevent\include\event2\event-config.h" />
+    <ClInclude Include="third\libevent\include\event2\event.h" />
+    <ClInclude Include="third\libevent\include\event2\event_compat.h" />
+    <ClInclude Include="third\libevent\include\event2\event_struct.h" />
+    <ClInclude Include="third\libevent\include\event2\http.h" />
+    <ClInclude Include="third\libevent\include\event2\http_compat.h" />
+    <ClInclude Include="third\libevent\include\event2\http_struct.h" />
+    <ClInclude Include="third\libevent\include\event2\keyvalq_struct.h" />
+    <ClInclude Include="third\libevent\include\event2\listener.h" />
+    <ClInclude Include="third\libevent\include\event2\rpc.h" />
+    <ClInclude Include="third\libevent\include\event2\rpc_compat.h" />
+    <ClInclude Include="third\libevent\include\event2\rpc_struct.h" />
+    <ClInclude Include="third\libevent\include\event2\tag.h" />
+    <ClInclude Include="third\libevent\include\event2\tag_compat.h" />
+    <ClInclude Include="third\libevent\include\event2\thread.h" />
+    <ClInclude Include="third\libevent\include\event2\util.h" />
+    <ClInclude Include="third\libevent\include\evhttp.h" />
+    <ClInclude Include="third\libevent\include\evrpc.h" />
+    <ClInclude Include="third\libevent\include\evutil.h" />
+    <ClInclude Include="third\mysql\include\decimal.h" />
+    <ClInclude Include="third\mysql\include\errmsg.h" />
+    <ClInclude Include="third\mysql\include\keycache.h" />
+    <ClInclude Include="third\mysql\include\mysql.h" />
+    <ClInclude Include="third\mysql\include\mysqld_ername.h" />
+    <ClInclude Include="third\mysql\include\mysqld_error.h" />
+    <ClInclude Include="third\mysql\include\mysql_com.h" />
+    <ClInclude Include="third\mysql\include\mysql_embed.h" />
+    <ClInclude Include="third\mysql\include\mysql_time.h" />
+    <ClInclude Include="third\mysql\include\mysql_version.h" />
+    <ClInclude Include="third\mysql\include\my_alloc.h" />
+    <ClInclude Include="third\mysql\include\my_attribute.h" />
+    <ClInclude Include="third\mysql\include\my_compiler.h" />
+    <ClInclude Include="third\mysql\include\my_config.h" />
+    <ClInclude Include="third\mysql\include\my_dbug.h" />
+    <ClInclude Include="third\mysql\include\my_dir.h" />
+    <ClInclude Include="third\mysql\include\my_getopt.h" />
+    <ClInclude Include="third\mysql\include\my_global.h" />
+    <ClInclude Include="third\mysql\include\my_list.h" />
+    <ClInclude Include="third\mysql\include\my_net.h" />
+    <ClInclude Include="third\mysql\include\my_no_pthread.h" />
+    <ClInclude Include="third\mysql\include\my_pthread.h" />
+    <ClInclude Include="third\mysql\include\my_sys.h" />
+    <ClInclude Include="third\mysql\include\my_xml.h" />
+    <ClInclude Include="third\mysql\include\m_ctype.h" />
+    <ClInclude Include="third\mysql\include\m_string.h" />
+    <ClInclude Include="third\mysql\include\plugin.h" />
+    <ClInclude Include="third\mysql\include\readline.h" />
+    <ClInclude Include="third\mysql\include\sql_common.h" />
+    <ClInclude Include="third\mysql\include\sql_state.h" />
+    <ClInclude Include="third\mysql\include\sslopt-case.h" />
+    <ClInclude Include="third\mysql\include\sslopt-longopts.h" />
+    <ClInclude Include="third\mysql\include\sslopt-vars.h" />
+    <ClInclude Include="third\mysql\include\typelib.h" />
+    <ClInclude Include="third\openssl\include\internal\bio.h" />
+    <ClInclude Include="third\openssl\include\internal\comp.h" />
+    <ClInclude Include="third\openssl\include\internal\conf.h" />
+    <ClInclude Include="third\openssl\include\internal\constant_time_locl.h" />
+    <ClInclude Include="third\openssl\include\internal\dane.h" />
+    <ClInclude Include="third\openssl\include\internal\dso.h" />
+    <ClInclude Include="third\openssl\include\internal\err.h" />
+    <ClInclude Include="third\openssl\include\internal\numbers.h" />
+    <ClInclude Include="third\openssl\include\internal\o_dir.h" />
+    <ClInclude Include="third\openssl\include\internal\o_str.h" />
+    <ClInclude Include="third\openssl\include\internal\thread_once.h" />
+    <ClInclude Include="third\openssl\include\openssl\aes.h" />
+    <ClInclude Include="third\openssl\include\openssl\asn1.h" />
+    <ClInclude Include="third\openssl\include\openssl\asn1t.h" />
+    <ClInclude Include="third\openssl\include\openssl\asn1_mac.h" />
+    <ClInclude Include="third\openssl\include\openssl\async.h" />
+    <ClInclude Include="third\openssl\include\openssl\bio.h" />
+    <ClInclude Include="third\openssl\include\openssl\blowfish.h" />
+    <ClInclude Include="third\openssl\include\openssl\bn.h" />
+    <ClInclude Include="third\openssl\include\openssl\buffer.h" />
+    <ClInclude Include="third\openssl\include\openssl\camellia.h" />
+    <ClInclude Include="third\openssl\include\openssl\cast.h" />
+    <ClInclude Include="third\openssl\include\openssl\cmac.h" />
+    <ClInclude Include="third\openssl\include\openssl\cms.h" />
+    <ClInclude Include="third\openssl\include\openssl\comp.h" />
+    <ClInclude Include="third\openssl\include\openssl\conf.h" />
+    <ClInclude Include="third\openssl\include\openssl\conf_api.h" />
+    <ClInclude Include="third\openssl\include\openssl\crypto.h" />
+    <ClInclude Include="third\openssl\include\openssl\ct.h" />
+    <ClInclude Include="third\openssl\include\openssl\des.h" />
+    <ClInclude Include="third\openssl\include\openssl\dh.h" />
+    <ClInclude Include="third\openssl\include\openssl\dsa.h" />
+    <ClInclude Include="third\openssl\include\openssl\dtls1.h" />
+    <ClInclude Include="third\openssl\include\openssl\ebcdic.h" />
+    <ClInclude Include="third\openssl\include\openssl\ec.h" />
+    <ClInclude Include="third\openssl\include\openssl\ecdh.h" />
+    <ClInclude Include="third\openssl\include\openssl\ecdsa.h" />
+    <ClInclude Include="third\openssl\include\openssl\engine.h" />
+    <ClInclude Include="third\openssl\include\openssl\err.h" />
+    <ClInclude Include="third\openssl\include\openssl\evp.h" />
+    <ClInclude Include="third\openssl\include\openssl\e_os2.h" />
+    <ClInclude Include="third\openssl\include\openssl\hmac.h" />
+    <ClInclude Include="third\openssl\include\openssl\idea.h" />
+    <ClInclude Include="third\openssl\include\openssl\kdf.h" />
+    <ClInclude Include="third\openssl\include\openssl\lhash.h" />
+    <ClInclude Include="third\openssl\include\openssl\md2.h" />
+    <ClInclude Include="third\openssl\include\openssl\md4.h" />
+    <ClInclude Include="third\openssl\include\openssl\md5.h" />
+    <ClInclude Include="third\openssl\include\openssl\mdc2.h" />
+    <ClInclude Include="third\openssl\include\openssl\modes.h" />
+    <ClInclude Include="third\openssl\include\openssl\objects.h" />
+    <ClInclude Include="third\openssl\include\openssl\obj_mac.h" />
+    <ClInclude Include="third\openssl\include\openssl\ocsp.h" />
+    <ClInclude Include="third\openssl\include\openssl\opensslconf.h" />
+    <ClInclude Include="third\openssl\include\openssl\opensslv.h" />
+    <ClInclude Include="third\openssl\include\openssl\ossl_typ.h" />
+    <ClInclude Include="third\openssl\include\openssl\pem.h" />
+    <ClInclude Include="third\openssl\include\openssl\pem2.h" />
+    <ClInclude Include="third\openssl\include\openssl\pkcs12.h" />
+    <ClInclude Include="third\openssl\include\openssl\pkcs7.h" />
+    <ClInclude Include="third\openssl\include\openssl\rand.h" />
+    <ClInclude Include="third\openssl\include\openssl\rc2.h" />
+    <ClInclude Include="third\openssl\include\openssl\rc4.h" />
+    <ClInclude Include="third\openssl\include\openssl\rc5.h" />
+    <ClInclude Include="third\openssl\include\openssl\ripemd.h" />
+    <ClInclude Include="third\openssl\include\openssl\rsa.h" />
+    <ClInclude Include="third\openssl\include\openssl\safestack.h" />
+    <ClInclude Include="third\openssl\include\openssl\seed.h" />
+    <ClInclude Include="third\openssl\include\openssl\sha.h" />
+    <ClInclude Include="third\openssl\include\openssl\srp.h" />
+    <ClInclude Include="third\openssl\include\openssl\srtp.h" />
+    <ClInclude Include="third\openssl\include\openssl\ssl.h" />
+    <ClInclude Include="third\openssl\include\openssl\ssl2.h" />
+    <ClInclude Include="third\openssl\include\openssl\ssl3.h" />
+    <ClInclude Include="third\openssl\include\openssl\stack.h" />
+    <ClInclude Include="third\openssl\include\openssl\symhacks.h" />
+    <ClInclude Include="third\openssl\include\openssl\tls1.h" />
+    <ClInclude Include="third\openssl\include\openssl\ts.h" />
+    <ClInclude Include="third\openssl\include\openssl\txt_db.h" />
+    <ClInclude Include="third\openssl\include\openssl\ui.h" />
+    <ClInclude Include="third\openssl\include\openssl\whrlpool.h" />
+    <ClInclude Include="third\openssl\include\openssl\x509.h" />
+    <ClInclude Include="third\openssl\include\openssl\x509v3.h" />
+    <ClInclude Include="third\openssl\include\openssl\x509_vfy.h" />
+    <ClInclude Include="third\openssl\include\openssl\__DECC_INCLUDE_EPILOGUE.H" />
+    <ClInclude Include="third\openssl\include\openssl\__DECC_INCLUDE_PROLOGUE.H" />
+    <ClInclude Include="third\tinyxml\include\tinystr.h" />
+    <ClInclude Include="third\tinyxml\include\tinyxml.h" />
+    <ClInclude Include="threadres.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="CMakeLists.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

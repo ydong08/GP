@@ -1,0 +1,110 @@
+﻿{
+    "ucenter": {
+        "ip": "0.0.0.0",
+        "port": 8085,
+        "id": 1100,
+        "thread_num": 10
+    },
+    "mysql_master": {
+        "ip": "192.168.115.196",
+        "port": 3306,
+        "user": "root",
+        "passwd": "root"
+    },
+    "mysql_slave": {
+        "ip": "192.168.115.196",
+        "port": 3306,
+        "user": "root",
+        "passwd": "root"
+    },
+    "mysql_routing": {
+        "ip": "192.168.115.196",
+        "port": 3306,
+        "user": "root",
+        "passwd": "root"
+    },
+    "user": {
+        "ip": "192.168.115.196",
+        "port": 20600,
+        "hearttime": 0
+    },
+    "redis": {
+        "php": {
+            "ip": "192.168.115.196",
+            "port": 6379
+        },
+        "param": {
+            "ip": "192.168.115.196",
+            "port": 6386
+        },
+        "rank": {
+            "ip": "192.168.115.196",
+            "port": 6381
+        },
+        "ote": {
+            "ip": "192.168.115.196",
+            "port": 6382
+        },
+        "user": {
+            "ip": "192.168.115.196",
+            "port": 6383
+        },
+        "ucnf": {
+            "ip": "192.168.115.196",
+            "port": 6384
+        },
+        "mon": {
+            "ip": "192.168.115.196",
+            "port": 6385
+        }
+    },
+    "log": {
+        "level": 0,
+        "ip": "",
+        "port": 1234
+    },
+    "money": {
+        "ip": "192.168.115.196",
+        "port": 20600,
+        "hearttime": 0
+    },
+    "PaymentInfo": {
+        "phoneRegister": 0,
+        "otherpay": 2,
+        "pmode": 72,
+        "paytype": 9,
+        "othertype": 0,
+        "bank": 0,
+        "bankinfo": 
+            {
+                "bankno": "61233422222333111",
+                "bankname": "中国工商银行",
+                "username": "小明"
+            }
+    },
+    "url": {
+        "res_domain": "http://192.168.115.196:8014/data/res/",
+        "up_icon": "http://zzz.66778899.biz/icon/up.php",
+        "icon_domain": "http://192.168.115.196/flower/data/icon/",
+        "feedback_pic_domain": "http://192.168.115.196/flower/data/feedback/",
+        "send_msg": "http://192.168.115.196:8016/newmsg.php",
+        "ucenter": "http://ucenter.66778899.biz/",
+        "paycenter": "http://ucenter.66778899.biz/"
+    },
+    "hall": {
+        "fish": [
+            {
+                "ip": "192.168.115.196",
+                "port": 20000
+            },
+            {
+                "ip": "192.168.115.196",
+                "port": 20000
+            }
+        ]
+    },
+	"maintenance": {
+        "type": 1,
+        "country": "柬埔寨"
+	}
+}

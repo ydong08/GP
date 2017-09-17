@@ -1,0 +1,1052 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source files">
+      <UniqueIdentifier>{18b432f8-1623-413f-b71a-944005182dd4}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Resource files">
+      <UniqueIdentifier>{17ebe21d-715c-45d0-b583-e002b9bfbd64}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Make files">
+      <UniqueIdentifier>{3aa10b6b-1d6a-4864-bccf-e3a640ca4e32}</UniqueIdentifier>
+      <Extensions>*.mak</Extensions>
+    </Filter>
+    <Filter Include="VisualGDB settings">
+      <UniqueIdentifier>{f3bde77f-3483-440f-be2f-35b1c3fba762}</UniqueIdentifier>
+      <Extensions>*.vgdbsettings</Extensions>
+    </Filter>
+    <Filter Include="comm">
+      <UniqueIdentifier>{2405ab29-edd4-4b3d-b917-6085539e63e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="comm\Util">
+      <UniqueIdentifier>{65039605-2155-4ae5-876a-cd9f7521b211}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="http_handle">
+      <UniqueIdentifier>{33c04245-cb72-47f3-a2ab-eb49c5284454}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files">
+      <UniqueIdentifier>{b0ad1768-76bc-441b-aca4-1a2b5d0fbf06}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="HttpSvr.cpp">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="threadres.cpp">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="CHttpReqDispatch.cpp">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="http_handle\CAccountLogin.cpp">
+      <Filter>http_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="http_handle\CBankCreate.cpp">
+      <Filter>http_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="http_handle\CBankFindPasswd.cpp">
+      <Filter>http_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="http_handle\CBankGetMoney.cpp">
+      <Filter>http_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="http_handle\CBankResetPasswd.cpp">
+      <Filter>http_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="http_handle\CBankSaveMoney.cpp">
+      <Filter>http_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="http_handle\CGetCheating.cpp">
+      <Filter>http_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="http_handle\CGetFeedBackSet.cpp">
+      <Filter>http_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="http_handle\CGetGameInfo.cpp">
+      <Filter>http_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="http_handle\CGetGameOnline.cpp">
+      <Filter>http_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="http_handle\CGetGameResource.cpp">
+      <Filter>http_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="http_handle\CGetGameSwitch.cpp">
+      <Filter>http_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="http_handle\CGetGameVersion.cpp">
+      <Filter>http_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="http_handle\CGetPayInfo.cpp">
+      <Filter>http_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="http_handle\CGetProductRoomConfig.cpp">
+      <Filter>http_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="http_handle\CGetRank.cpp">
+      <Filter>http_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="http_handle\CGetRankAwardRules.cpp">
+      <Filter>http_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="http_handle\CGetRoomConfig.cpp">
+      <Filter>http_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="http_handle\CGetTaskAward.cpp">
+      <Filter>http_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="http_handle\CGetTaskInfo.cpp">
+      <Filter>http_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="http_handle\CGuestBinding.cpp">
+      <Filter>http_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="http_handle\CGuestLogin.cpp">
+      <Filter>http_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="http_handle\CHttpRequestHandler.cpp">
+      <Filter>http_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="http_handle\CRegBindingAliPay.cpp">
+      <Filter>http_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="http_handle\CRegGetLdCode.cpp">
+      <Filter>http_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="http_handle\CRegUserName.cpp">
+      <Filter>http_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="http_handle\CRegUserNameBinding.cpp">
+      <Filter>http_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="http_handle\CSetDefaultIcon.cpp">
+      <Filter>http_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="http_handle\CUpdateIcon.cpp">
+      <Filter>http_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="http_handle\CUpdateUser.cpp">
+      <Filter>http_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="comm\Util\IniFile.cpp">
+      <Filter>comm\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="comm\Util\md5.cpp">
+      <Filter>comm\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="comm\Packet.cpp">
+      <Filter>comm</Filter>
+    </ClCompile>
+    <ClCompile Include="comm\EvtClientMgr.cpp">
+      <Filter>comm</Filter>
+    </ClCompile>
+    <ClCompile Include="comm\TcpMsg.cpp">
+      <Filter>comm</Filter>
+    </ClCompile>
+    <ClCompile Include="http_handle\CGetFeedBackHistory.cpp">
+      <Filter>http_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="comm\Util\Helper.cpp">
+      <Filter>comm\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="comm\Util\Lib_Ip.cpp">
+      <Filter>comm\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="CConfig.cpp">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="http_handle\CRegResetPassword.cpp">
+      <Filter>http_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="http_handle\CIssuedAccount.cpp">
+      <Filter>http_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="http_handle\CCheckIdCode.cpp">
+      <Filter>http_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="http_handle\CCheckMnick.cpp">
+      <Filter>http_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="http_handle\CCheckUserName.cpp">
+      <Filter>http_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="http_handle\CGetNotice.cpp">
+      <Filter>http_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="comm\HttpLib.cpp">
+      <Filter>comm</Filter>
+    </ClCompile>
+    <ClCompile Include="comm\Util\base64.cpp">
+      <Filter>comm\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="http_handle\CReceiveBenefits.cpp">
+      <Filter>http_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="http_handle\CTest.cpp">
+      <Filter>http_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="CalUsingTime.cpp">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="comm\Util\url_code.cpp">
+      <Filter>comm\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="comm\RedisLogic.cpp">
+      <Filter>comm</Filter>
+    </ClCompile>
+    <ClCompile Include="comm\SqlLogic.cpp">
+      <Filter>comm</Filter>
+    </ClCompile>
+    <ClCompile Include="http_handle\CReloadConfig.cpp">
+      <Filter>http_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="http_handle\CRegGetPassword.cpp">
+      <Filter>http_handle</Filter>
+    </ClCompile>
+    <ClCompile Include="RedisAccessMgr.cpp">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="MySqlDBAccessMgr.cpp">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="comm\ClientSocketEx.cpp">
+      <Filter>comm</Filter>
+    </ClCompile>
+    <ClCompile Include="comm\UserDoing.cpp">
+      <Filter>comm</Filter>
+    </ClCompile>
+    <ClCompile Include="comm\XyRsa.cpp">
+      <Filter>comm</Filter>
+    </ClCompile>
+    <ClCompile Include="comm\XyCrypto.cpp">
+      <Filter>comm</Filter>
+    </ClCompile>
+    <ClCompile Include="comm\XyCryptoEx.cpp">
+      <Filter>comm</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Makefile" />
+    <None Include="debug.mak">
+      <Filter>Make files</Filter>
+    </None>
+    <None Include="HttpSvr-Debug.vgdbsettings">
+      <Filter>VisualGDB settings</Filter>
+    </None>
+    <None Include="release.mak">
+      <Filter>Make files</Filter>
+    </None>
+    <None Include="HttpSvr-Release.vgdbsettings">
+      <Filter>VisualGDB settings</Filter>
+    </None>
+    <None Include="debugddcrypto.mak">
+      <Filter>Make files</Filter>
+    </None>
+    <None Include="releaseddcrypto.mak">
+      <Filter>Make files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="threadres.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="CHttpReqDispatch.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="http_handle\CAccountLogin.h">
+      <Filter>http_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="http_handle\CBankCreate.h">
+      <Filter>http_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="http_handle\CBankFindPasswd.h">
+      <Filter>http_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="http_handle\CBankGetMoney.h">
+      <Filter>http_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="http_handle\CBankResetPasswd.h">
+      <Filter>http_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="http_handle\CBankSaveMoney.h">
+      <Filter>http_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="http_handle\CGetCheating.h">
+      <Filter>http_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="http_handle\CGetFeedBackSet.h">
+      <Filter>http_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="http_handle\CGetGameInfo.h">
+      <Filter>http_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="http_handle\CGetGameOnline.h">
+      <Filter>http_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="http_handle\CGetGameResource.h">
+      <Filter>http_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="http_handle\CGetGameSwitch.h">
+      <Filter>http_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="http_handle\CGetGameVersion.h">
+      <Filter>http_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="http_handle\CGetPayInfo.h">
+      <Filter>http_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="http_handle\CGetProductRoomConfig.h">
+      <Filter>http_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="http_handle\CGetRank.h">
+      <Filter>http_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="http_handle\CGetRankAwardRules.h">
+      <Filter>http_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="http_handle\CGetRoomConfig.h">
+      <Filter>http_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="http_handle\CGetTaskAward.h">
+      <Filter>http_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="http_handle\CGetTaskInfo.h">
+      <Filter>http_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="http_handle\CGuestBinding.h">
+      <Filter>http_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="http_handle\CGuestLogin.h">
+      <Filter>http_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="http_handle\CHttpRequestHandler.h">
+      <Filter>http_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="http_handle\CRegBindingAliPay.h">
+      <Filter>http_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="http_handle\CRegGetLdCode.h">
+      <Filter>http_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="http_handle\CRegUserName.h">
+      <Filter>http_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="http_handle\CRegUserNameBinding.h">
+      <Filter>http_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="http_handle\CSetDefaultIcon.h">
+      <Filter>http_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="http_handle\CUpdateIcon.h">
+      <Filter>http_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="http_handle\CUpdateUser.h">
+      <Filter>http_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="comm\Util\IniFile.h">
+      <Filter>comm\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="comm\Util\md5.h">
+      <Filter>comm\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="comm\Packet.h">
+      <Filter>comm</Filter>
+    </ClInclude>
+    <ClInclude Include="comm\EvtClientMgr.h">
+      <Filter>comm</Filter>
+    </ClInclude>
+    <ClInclude Include="comm\atomic.h">
+      <Filter>comm</Filter>
+    </ClInclude>
+    <ClInclude Include="comm\TcpMsg.h">
+      <Filter>comm</Filter>
+    </ClInclude>
+    <ClInclude Include="http_handle\CGetFeedBackHistory.h">
+      <Filter>http_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="comm\Util\Helper.h">
+      <Filter>comm\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="comm\Util\Lib_Ip.h">
+      <Filter>comm\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="CConfig.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="http_handle\CRegResetPassword.h">
+      <Filter>http_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="http_handle\CIssuedAccount.h">
+      <Filter>http_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="http_handle\CCheckIdCode.h">
+      <Filter>http_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="http_handle\CCheckMnick.h">
+      <Filter>http_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="http_handle\CCheckUserName.h">
+      <Filter>http_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="http_handle\CGetNotice.h">
+      <Filter>http_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="comm\HttpLib.h">
+      <Filter>comm</Filter>
+    </ClInclude>
+    <ClInclude Include="comm\Util\base64.h">
+      <Filter>comm\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="http_handle\CReceiveBenefits.h">
+      <Filter>http_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="http_handle\CTest.h">
+      <Filter>http_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="CalUsingTime.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="comm\Util\url_code.h">
+      <Filter>comm\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="comm\RedisLogic.h">
+      <Filter>comm</Filter>
+    </ClInclude>
+    <ClInclude Include="comm\SqlLogic.h">
+      <Filter>comm</Filter>
+    </ClInclude>
+    <ClInclude Include="http_handle\CReloadConfig.hpp">
+      <Filter>http_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="http_handle\CRegGetPassword.h">
+      <Filter>http_handle</Filter>
+    </ClInclude>
+    <ClInclude Include="RedisAccessMgr.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="MySqlDBAccessMgr.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="comm\ClientSocketEx.h">
+      <Filter>comm</Filter>
+    </ClInclude>
+    <ClInclude Include="comm\UserDoing.h">
+      <Filter>comm</Filter>
+    </ClInclude>
+    <ClInclude Include="comm\XyRsa.h">
+      <Filter>comm</Filter>
+    </ClInclude>
+    <ClInclude Include="comm\XyCrypto.h">
+      <Filter>comm</Filter>
+    </ClInclude>
+    <ClInclude Include="comm\XyCryptoEx.h">
+      <Filter>comm</Filter>
+    </ClInclude>
+    <ClInclude Include="third\curl\include\curl\curl.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\curl\include\curl\curlbuild.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\curl\include\curl\curlrules.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\curl\include\curl\curlver.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\curl\include\curl\easy.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\curl\include\curl\mprintf.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\curl\include\curl\multi.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\curl\include\curl\stdcheaders.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\curl\include\curl\typecheck-gcc.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\DDCrypt\include\DDCrypt.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\HttSvrComm\include\ClientSocket.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\HttSvrComm\include\Console.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\HttSvrComm\include\EvHttpSvr.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\HttSvrComm\include\EvtTimer.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\HttSvrComm\include\hiredis\async.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\HttSvrComm\include\hiredis\dict.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\HttSvrComm\include\hiredis\fmacros.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\HttSvrComm\include\hiredis\hiredis.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\HttSvrComm\include\hiredis\net.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\HttSvrComm\include\hiredis\read.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\HttSvrComm\include\hiredis\sds.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\HttSvrComm\include\hiredis\win32.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\HttSvrComm\include\json\allocator.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\HttSvrComm\include\json\assertions.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\HttSvrComm\include\json\autolink.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\HttSvrComm\include\json\config.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\HttSvrComm\include\json\features.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\HttSvrComm\include\json\forwards.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\HttSvrComm\include\json\json.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\HttSvrComm\include\json\reader.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\HttSvrComm\include\json\value.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\HttSvrComm\include\json\version.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\HttSvrComm\include\json\writer.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\HttSvrComm\include\JsonValueConvert.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\HttSvrComm\include\Log\Console.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\HttSvrComm\include\Log\Logger.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\HttSvrComm\include\Log\MyLogger.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\HttSvrComm\include\Log\TtyColor.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\HttSvrComm\include\Logger.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\HttSvrComm\include\MsgQueue.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\HttSvrComm\include\MyLogger.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\HttSvrComm\include\MySqlDBAccess.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\HttSvrComm\include\RedisAccess.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\HttSvrComm\include\SpiderHttp.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\HttSvrComm\include\StrFunc.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\HttSvrComm\include\TtyColor.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\HttSvrComm\include\Typedef.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\HttSvrComm\include\Util.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\libevent\include\evdns.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\libevent\include\event.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\libevent\include\event2\buffer.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\libevent\include\event2\bufferevent.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\libevent\include\event2\bufferevent_compat.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\libevent\include\event2\bufferevent_ssl.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\libevent\include\event2\bufferevent_struct.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\libevent\include\event2\buffer_compat.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\libevent\include\event2\dns.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\libevent\include\event2\dns_compat.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\libevent\include\event2\dns_struct.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\libevent\include\event2\event-config.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\libevent\include\event2\event.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\libevent\include\event2\event_compat.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\libevent\include\event2\event_struct.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\libevent\include\event2\http.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\libevent\include\event2\http_compat.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\libevent\include\event2\http_struct.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\libevent\include\event2\keyvalq_struct.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\libevent\include\event2\listener.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\libevent\include\event2\rpc.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\libevent\include\event2\rpc_compat.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\libevent\include\event2\rpc_struct.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\libevent\include\event2\tag.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\libevent\include\event2\tag_compat.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\libevent\include\event2\thread.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\libevent\include\event2\util.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\libevent\include\evhttp.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\libevent\include\evrpc.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\libevent\include\evutil.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\mysql\include\decimal.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\mysql\include\errmsg.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\mysql\include\keycache.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\mysql\include\mysql.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\mysql\include\mysqld_ername.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\mysql\include\mysqld_error.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\mysql\include\mysql_com.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\mysql\include\mysql_embed.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\mysql\include\mysql_time.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\mysql\include\mysql_version.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\mysql\include\my_alloc.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\mysql\include\my_attribute.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\mysql\include\my_compiler.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\mysql\include\my_config.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\mysql\include\my_dbug.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\mysql\include\my_dir.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\mysql\include\my_getopt.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\mysql\include\my_global.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\mysql\include\my_list.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\mysql\include\my_net.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\mysql\include\my_no_pthread.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\mysql\include\my_pthread.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\mysql\include\my_sys.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\mysql\include\my_xml.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\mysql\include\m_ctype.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\mysql\include\m_string.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\mysql\include\plugin.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\mysql\include\readline.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\mysql\include\sql_common.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\mysql\include\sql_state.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\mysql\include\sslopt-case.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\mysql\include\sslopt-longopts.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\mysql\include\sslopt-vars.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\mysql\include\typelib.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\internal\bio.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\internal\comp.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\internal\conf.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\internal\constant_time_locl.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\internal\dane.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\internal\dso.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\internal\err.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\internal\numbers.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\internal\o_dir.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\internal\o_str.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\internal\thread_once.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\aes.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\asn1.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\asn1t.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\asn1_mac.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\async.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\bio.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\blowfish.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\bn.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\buffer.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\camellia.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\cast.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\cmac.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\cms.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\comp.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\conf.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\conf_api.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\crypto.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\ct.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\des.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\dh.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\dsa.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\dtls1.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\ebcdic.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\ec.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\ecdh.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\ecdsa.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\engine.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\err.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\evp.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\e_os2.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\hmac.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\idea.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\kdf.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\lhash.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\md2.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\md4.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\md5.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\mdc2.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\modes.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\objects.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\obj_mac.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\ocsp.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\opensslconf.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\opensslv.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\ossl_typ.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\pem.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\pem2.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\pkcs12.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\pkcs7.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\rand.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\rc2.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\rc4.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\rc5.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\ripemd.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\rsa.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\safestack.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\seed.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\sha.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\srp.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\srtp.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\ssl.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\ssl2.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\ssl3.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\stack.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\symhacks.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\tls1.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\ts.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\txt_db.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\ui.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\whrlpool.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\x509.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\x509v3.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\x509_vfy.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\__DECC_INCLUDE_EPILOGUE.H">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\openssl\include\openssl\__DECC_INCLUDE_PROLOGUE.H">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\tinyxml\include\tinystr.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\tinyxml\include\tinyxml.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="CMakeLists.txt" />
+  </ItemGroup>
+</Project>

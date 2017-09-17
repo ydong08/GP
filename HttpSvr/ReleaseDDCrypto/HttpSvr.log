@@ -1,0 +1,4 @@
+﻿  VisualGDB: Found 386 source files to transfer. Checking the source cache to find modified files...
+  VisualGDB: No file changes detected. If you believe it's a mistake, please clean the project and build it again.
+  VisualGDB: Run "make CONFIG=ReleaseDDCrypto" in directory "/home/mo/HttpSvr" on root@192.168.56.102 (SSH)
+  make: Nothing to be done for `all'.

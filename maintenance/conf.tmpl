@@ -1,0 +1,68 @@
+# -*- coding:utf-8 -*-
+# git 账号
+git_user = ""
+# git 密码
+git_password = ""
+
+# git url
+git_url = "http://%s:%s@139.129.163.152:3030/blackoto/%s.git"
+
+# 需要部署的游戏名称，如果需要指定分支，请在名称后加:分支名，例如"land:test"
+# 详见 git_util.py game_git_path配置
+deploy_games = ["", ]
+
+# 公共服模块，无需修改，除非是指定特定分支
+# 目前有"common","gosvr","httpsvr"3个公共git仓库
+deploy_public = ["common", "httpsvr:limc", "gosvr"]
+
+# 游戏部署服务器的根目录，用于放置游戏程序及日志
+# 由于我们使用/home/Output为部署目录， 所以您不能使用类似/home/Output/subdirectory的目录，
+# 您可以指定挂载磁盘，指定目录后，我们将创建一个软连接到 /home/Output
+deploy_root_path = "/mnt/xxx"
+
+# 以下服务器地址
+# 如果有内网，请指定内网IP地址
+
+# mysql 部署服务器登录信息
+mysql_machine_host = ""
+mysql_machine_port = 22
+mysql_machine_user = ""
+mysql_machine_password = ""
+
+# mysql 服务器信息
+# 如果mysql已安装并配置好，请填写正确的用户名密码及ROOT密码
+# 如果mysql没有安装，此脚本会根据你设置的用户名密码创建用户，设置权限
+mysql_host = mysql_machine_host
+mysql_port = 3306
+mysql_root_password = "root"
+mysql_user = ""
+mysql_password = ""
+
+# redis 部署服务器登录信息
+redis_machine_host = ""
+redis_machine_port = 22
+redis_machine_user = ""
+redis_machine_password = ""
+
+# 游戏部署服务器登录信息
+game_machine_host = ""
+game_machine_port = 22
+game_machine_user = ""
+game_machine_password = ""
+
+# 备份服务器ftp登录信息，用于数据库备份数据存储
+backup_machine_host = ""
+backup_machine_port = 21
+backup_ftp_user = ""
+backup_ftp_password = ""
+
+# gateway 服务器信息，用于fabric部署跳板机
+gateway_host = ""
+gateway_port = 0
+gateway_user = ""
+gateway_password = ""
+
+gateway = ["%s:%d" % (gateway_host, gateway_port), gateway_user, gateway_password]
+game_machine = ["%s:%d" % (game_machine_host, game_machine_port), game_machine_user, game_machine_password]
+redis_machine = ["%s:%d" % (redis_machine_host, redis_machine_port), redis_machine_user, redis_machine_password]
+mysql_machine = ["%s:%d" % (mysql_machine_host, mysql_machine_port), mysql_machine_user, mysql_machine_password]
