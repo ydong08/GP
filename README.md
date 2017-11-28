@@ -1,1 +1,1 @@
-# GProject
+# GP
